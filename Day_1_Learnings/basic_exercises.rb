@@ -13,3 +13,19 @@ print "Enter your favorite color: "
 favorite_color = gets.chomp.strip.downcase
 puts "Hello #{first_name} #{last_name}, your favorite color is #{favorite_color}!"
 puts "\n"
+
+
+# Exercise 2: The Even-Odd Filter
+# Goal: Practice Arrays and the .select iterator.
+
+# Task: Create an array of numbers from 1 to 20. Create two new arrays: one containing only even numbers and one containing only odd numbers.
+
+# Hint: (1..20).to_a creates the initial array. Use .even? or % 2 == 0.
+
+puts "--- Even-Odd Filter ---"
+numbers = (1..20).to_a
+even_numbers = numbers.select { |n| n.even? }
+odd_numbers = numbers.select { |n| n.odd? } 
+puts "Even Numbers: #{even_numbers}"
+puts "Odd Numbers: #{odd_numbers}"
+puts "\n"
