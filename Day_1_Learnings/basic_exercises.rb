@@ -117,3 +117,19 @@ else
   puts "Sorry, the word '#{input_word}' is not in the dictionary."
 end
 puts "\n"
+
+
+# Exercise 6: Array Transformer (Method Chaining)
+# Goal: Practice .map, .sort, and .reverse.
+
+# Task: Take this array: ["ruby", "python", "java", "javascript"].
+
+# Transformation: Capitalize every word, sort them alphabetically, and then reverse the entire list.
+
+# Hint: You can chain them like: array.map(...).sort.reverse.
+
+puts "--- Array Transformer ---"
+languages = ["ruby", "python", "java", "javascript"]
+transformed = languages.map { |lang| lang.capitalize }.sort.reverse
+puts "Transformed Languages: #{transformed}"
+puts "\n"
