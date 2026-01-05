@@ -90,3 +90,30 @@ puts "--- FizzBuzz ---"
   end
 end
 puts "\n"
+
+# Exercise 5: Hash Translator (The Dictionary)
+# Goal: Practice Hash lookups and Symbols.
+
+# Task: Create a "Dictionary" hash where keys are English words (symbols) and values are their Hindi translations (strings).
+
+# Example: words = { apple: "Seb", water: "Paani" }. Ask the user for a word and print the translation.
+
+puts "--- Hash Translator ---"
+words = {
+  apple: "Seb",
+  water: "Paani",
+  book: "Kitaab",
+  sun: "Suraj",
+  moon: "Chand"
+}
+
+print "Enter an English word to translate (apple, water, book, sun, moon): "
+input_word = gets.chomp.strip.to_sym # Convert input to symbol
+
+translation = words[input_word.downcase]
+if translation
+  puts "The Hindi translation of '#{input_word}' is '#{translation}'."
+else
+  puts "Sorry, the word '#{input_word}' is not in the dictionary."
+end
+puts "\n"
