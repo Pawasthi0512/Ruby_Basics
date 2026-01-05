@@ -63,3 +63,30 @@ puts "10 / 5 = #{calculate(10, 5, "/")}"
 puts "10 / 0 = #{calculate(10, 0, "/")}"
 puts "10 ^ 5 = #{calculate(10, 5, "^")}"
 puts "\n"
+
+
+# Exercise 4: FizzBuzz (The Classic Interview Question)
+# Goal: Practice Loops and Modulo operators.
+
+# Task: Print numbers 1 to 30.
+
+# If divisible by 3, print "Fizz".
+
+# If divisible by 5, print "Buzz".
+
+# If divisible by both, print "FizzBuzz".
+
+# Otherwise, print the number.
+puts "--- FizzBuzz ---"
+(1..30).each do |n|
+  if n % 3 == 0 && n % 5 == 0
+    puts "Number #{n}: FizzBuzz"
+  elsif n % 3 == 0
+    puts "Number #{n}: Fizz"
+  elsif n % 5 == 0
+    puts "Number #{n}: Buzz"
+  else
+    puts "Number #{n}: #{n}"
+  end
+end
+puts "\n"
