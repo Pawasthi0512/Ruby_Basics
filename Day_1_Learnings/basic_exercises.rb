@@ -29,3 +29,37 @@ odd_numbers = numbers.select { |n| n.odd? }
 puts "Even Numbers: #{even_numbers}"
 puts "Odd Numbers: #{odd_numbers}"
 puts "\n"
+
+
+# Exercise 3: Simple Calculator Method
+# Goal: Practice Methods, Parameters, and case statements.
+
+# Task: Write a method calculate(a, b, operator) that handles +, -, *, and /.
+
+# Expected Output: calculate(10, 2, "*") should return 20.
+def calculate(a, b, operator)
+  case operator
+  when "+"
+    a + b
+  when "-"
+    a - b
+  when "*"
+    a * b
+  when "/"
+    if b != 0
+      a / b
+    else
+      "Error: Division by zero"
+    end
+  else
+    "Error: Unsupported operator"
+  end
+end 
+puts "--- Simple Calculator ---"
+puts "10 + 5 = #{calculate(10, 5, "+")}"
+puts "10 - 5 = #{calculate(10, 5, "-")}"
+puts "10 * 5 = #{calculate(10, 5, "*")}"
+puts "10 / 5 = #{calculate(10, 5, "/")}"
+puts "10 / 0 = #{calculate(10, 0, "/")}"
+puts "10 ^ 5 = #{calculate(10, 5, "^")}"
+puts "\n"
